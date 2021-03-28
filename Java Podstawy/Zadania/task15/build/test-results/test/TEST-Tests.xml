@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-20T09:23:15" hostname="DESKTOP-G79KBJE" time="0.013">
+  <properties/>
+  <testcase name="testSolution" classname="Tests" time="0.01"/>
+  <testcase name="testSolution2" classname="Tests" time="0.002"/>
+  <testcase name="testSolution3" classname="Tests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
