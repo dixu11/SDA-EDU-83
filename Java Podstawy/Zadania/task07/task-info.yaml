@@ -3,7 +3,7 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 186
+  - offset: 339
     length: 31
     placeholder_text: // Tu zaimplementuj rozwiązanie
     initial_state:
@@ -11,7 +11,7 @@ files:
       offset: 186
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       int currentPowerOfTwo = 1;
               do {
@@ -97,5 +97,8 @@ files:
 
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 10 Apr 2021 07:47:02 UTC
 record: -1

@@ -3,15 +3,15 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 143
-    length: 12
+  - offset: 186
+    length: 48
     placeholder_text: // your code
     initial_state:
       length: 12
       offset: 143
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
               float f = scanner.nextFloat();
 
@@ -122,5 +122,8 @@ files:
         }
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 10 Apr 2021 07:31:15 UTC
 record: -1
