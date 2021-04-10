@@ -3,8 +3,8 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 234
-    length: 627
+  - offset: 225
+    length: 225
     placeholder_text: // Tu zaimplementuj rozwiązanie
     initial_state:
       length: 31

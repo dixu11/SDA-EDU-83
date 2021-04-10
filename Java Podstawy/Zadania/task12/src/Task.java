@@ -7,23 +7,37 @@ public class Task {
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-        // Tu zaimplementuj rozwiązanie
+       // int[] inneLiczby = {1, 2, 3};
 
-      /*  Arrays.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
-        int powtorki = 1;
-        for (int i = 1; i < numbers.length; i++) {
-            int wczesniejsze = numbers[i - 1];
-            int aktualne = numbers[i];
-            if (wczesniejsze == aktualne) {
-                powtorki++;
-            } else {
-                System.out.println(wczesniejsze + " - " + powtorki);
-                powtorki = 1;
-            }
-            if (i == numbers.length - 1) {
-                System.out.println(aktualne + " - " + powtorki);
-            }
-        }*/
+        Counter licznik = new Counter(numbers);
+        //Counter licznik2 = new Counter(inneLiczby);
+
+        System.out.println(licznik);
+        licznik.countOccurrences(3);
+    }
+
+}
+
+class Counter{
+
+    private int[] numbers;
+
+
+    public Counter(int[] someNumbers){
+        numbers = someNumbers;
+    }
+
+    int countOccurrences(int number){ // policz wystąpienia danej liczby
+        for(int i : numbers){
+            System.out.println(i);
+        }
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Counter{" +
+                "numbers=" + Arrays.toString(numbers) +
+                '}';
     }
 }

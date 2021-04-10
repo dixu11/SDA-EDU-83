@@ -3,7 +3,7 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 151
+  - offset: 327
     length: 31
     placeholder_text: // Tu zaimplementuj rozwiązanie
     initial_state:
@@ -11,7 +11,7 @@ files:
       offset: 151
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       int number = scanner.nextInt();
 
@@ -98,5 +98,8 @@ files:
 
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 10 Apr 2021 09:06:42 UTC
 record: -1
