@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Task {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+      /*  Scanner scanner = new Scanner(System.in);
 //        Napisz program, który odczytuje wprowadzony przez użytkownika tekst, a nastepnie dzieli go na poszczególne słowa. Następnie zlicza ilość wystąpień słów niezależnie od wielkości liter i wypisuje je w konsoli w kolejności alfabetycznej.
 
 //       Przykładowo dla tekstu "Ala lubi koty, ale nie jest przez Koty lubiana.", program powinien wypisać w konsoli:
@@ -40,7 +40,28 @@ public class Task {
         String litera2 = "b";
        // System.out.println(litera1.compareTo(litera2));
         // -   ----------- 0 --------------> +
-        policzWystapienia(slowa);
+        policzWystapienia(slowa);*/
+
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        text = text.toLowerCase();
+        if (text.contains(",") || text.contains(".") || text.contains("?") || text.contains("!") || text.contains(";")) {
+            text = text.replace(",", "").replace(".", "").replace("?", "").replace("!", "").replace(";", "");
+        }
+        String[] splitted = text.split(" ");
+        Arrays.sort(splitted);
+        System.out.println(Arrays.toString(splitted));
+        int count = 1;
+        for (int i = 1; i < splitted.length; i++) {
+            String previous = splitted[i - 1];
+            String actual = splitted[i];
+            if (previous.equals(actual)) {
+                count++;
+            } else {
+                count = 1;
+            }
+            System.out.println(splitted[i - 1] + " - " + count);
+        }
 
     } // koniec main
 
@@ -49,10 +70,10 @@ public class Task {
        /* if (slowo.endsWith(",") || slowo.endsWith(".") ||slowo.endsWith("!")|| slowo.endsWith("?")) { //czy kończy się na przecinek lub kropkę
             slowo = slowo.substring(0, slowo.length() - 1); // ucinam ostatni znak
        }*/
-        slowo = slowo.replace(",","")
-                .replace(".","")
-                .replace("!","")
-                .replace("?","");
+        slowo = slowo.replace(",", "")
+                .replace(".", "")
+                .replace("!", "")
+                .replace("?", "");
         slowo = slowo.toLowerCase();
         //System.out.println("Po modyfikacji: " + slowo);
         return slowo;
@@ -81,7 +102,7 @@ public class Task {
                 System.out.println(wczesniejsze + " - " + powtorki);
                 powtorki = 1;
             }
-            if(i == slowa.length-1){ // jeśli jestem przy ostatnim to podsumowuje ten ostatni
+            if (i == slowa.length - 1) { // jeśli jestem przy ostatnim to podsumowuje ten ostatni
                 System.out.println(aktualne + " - " + powtorki);
             }
         }
