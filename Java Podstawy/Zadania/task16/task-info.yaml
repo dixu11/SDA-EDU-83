@@ -3,15 +3,15 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 151
-    length: 31
+  - offset: 237
+    length: 171
     placeholder_text: // Tu zaimplementuj rozwiązanie
     initial_state:
       length: 31
       offset: 151
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       String text = scanner.nextLine();
 
@@ -90,5 +90,8 @@ files:
 
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 10 Apr 2021 13:18:10 UTC
 record: -1
