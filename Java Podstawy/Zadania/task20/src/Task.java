@@ -9,8 +9,7 @@ public class Task {
     }
 
     public static int[] calculateDifference(String dateAString, String dateBString) {
-        System.out.println(dateAString);
-        System.out.println(dateBString);
+
         // YYYY-MM-DD -> standardowy format
         //przygotowanie niestandardowych formatów
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy::MM::dd");
@@ -18,22 +17,10 @@ public class Task {
         LocalDate dateA = LocalDate.parse(dateAString,formatter1);
         LocalDate dateB = LocalDate.parse(dateBString,formatter2);
 
-        LocalDate dateBefore;
-        LocalDate dateAfter;
-
-        if (dateA.isBefore(dateB)) {
-            dateBefore = dateA;
-            dateAfter = dateB;
-        } else {
-            dateBefore = dateB;
-            dateAfter = dateA;
-        }
-
-        System.out.println("Before: " + dateBefore);
-        System.out.println("After: " + dateAfter);
-        int yearsBetween  =(int) dateBefore.until(dateAfter, ChronoUnit.YEARS);
-        int monthsBetween =(int) dateBefore.until(dateAfter, ChronoUnit.MONTHS);
-        int daysBetween =  (int) dateBefore.until(dateAfter, ChronoUnit.DAYS);
+      Period period =  dateA.until(dateB);
+        int yearsBetween  = period.getYears();
+        int monthsBetween =period.getMonths();
+        int daysBetween =  period.getDays();
         int[] results = {yearsBetween, monthsBetween, daysBetween};
         return results;
     }
